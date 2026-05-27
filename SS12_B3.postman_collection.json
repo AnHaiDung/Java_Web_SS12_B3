@@ -1,69 +1,102 @@
 {
   "info": {
-    "name": "SS12_B3 Order API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "_postman_id": "3fc5c83a-7679-4d12-902a-bcda8ba28376",
+    "name": "SS12_B3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54865067",
+    "_collection_link": "https://go.postman.co/collection/54865067-3fc5c83a-7679-4d12-902a-bcda8ba28376?source=collection_link"
   },
   "item": [
     {
-      "name": "Get all orders",
+      "name": "ss12_b3_1",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/orders"
-      }
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
     },
     {
-      "name": "Get order by id",
+      "name": "ss12_b3_2",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/orders/1"
-      }
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/orders/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders",
+            "1"
+          ]
+        }
+      },
+      "response": []
     },
     {
-      "name": "Create order",
+      "name": "ss12_b3_3",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/orders/99",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders",
+            "99"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12_3_4",
       "request": {
         "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
+        "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"customerName\": \"Le Van C\",\n  \"product\": \"Keyboard\",\n  \"quantity\": 1,\n  \"totalAmount\": 75.0\n}"
-        },
-        "url": "{{baseUrl}}/api/orders"
-      }
-    },
-    {
-      "name": "Update order",
-      "request": {
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
+          "raw": "{\r\n  \"customerName\": \"Le Van C\",\r\n  \"product\": \"Keyboard\",\r\n  \"quantity\": 1,\r\n  \"totalAmount\": 75.0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
           }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"customerName\": \"Pham Thi D\",\n  \"product\": \"Monitor\",\n  \"quantity\": 2,\n  \"totalAmount\": 400.0\n}"
         },
-        "url": "{{baseUrl}}/api/orders/1"
-      }
-    },
-    {
-      "name": "Delete order",
-      "request": {
-        "method": "DELETE",
-        "url": "{{baseUrl}}/api/orders/1"
-      }
-    }
-  ],
-  "variable": [
-    {
-      "key": "baseUrl",
-      "value": "http://localhost:8080"
+        "url": {
+          "raw": "http://localhost:8080/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
