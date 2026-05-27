@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "SS12_B3 Order API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all orders",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/orders"
+      }
+    },
+    {
+      "name": "Get order by id",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/orders/1"
+      }
+    },
+    {
+      "name": "Create order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Le Van C\",\n  \"product\": \"Keyboard\",\n  \"quantity\": 1,\n  \"totalAmount\": 75.0\n}"
+        },
+        "url": "{{baseUrl}}/api/orders"
+      }
+    },
+    {
+      "name": "Update order",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Pham Thi D\",\n  \"product\": \"Monitor\",\n  \"quantity\": 2,\n  \"totalAmount\": 400.0\n}"
+        },
+        "url": "{{baseUrl}}/api/orders/1"
+      }
+    },
+    {
+      "name": "Delete order",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/orders/1"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
